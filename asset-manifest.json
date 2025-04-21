@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/CognitiveEval-web/static/js/main.d81ddf44.js",
+    "index.html": "/CognitiveEval-web/index.html",
+    "main.d81ddf44.js.map": "/CognitiveEval-web/static/js/main.d81ddf44.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d81ddf44.js"
+  ]
+}
