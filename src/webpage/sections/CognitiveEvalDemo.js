@@ -54,7 +54,6 @@ const CognitiveEvalDemo = () => {
             textAlign: 'center',
             mb: 2,
             color: 'text.secondary',
-            textAlign: 'justify',
             paddingTop: '1rem',
           }}
         >

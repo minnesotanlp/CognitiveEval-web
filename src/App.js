@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ProjectPage />} />
+        <Route path="/CognitiveEval-web" element={<ProjectPage />} />
         <Route path="/experiment/:id" element={<ExperimentPage />} />
       </Routes>
       

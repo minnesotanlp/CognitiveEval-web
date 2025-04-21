@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Avatar, Link as MuiLink, Button } from '@mui/material';
-import LaptopIcon from '@mui/icons-material/Laptop';
 import CodeIcon from '@mui/icons-material/Code';
 import DescriptionIcon from '@mui/icons-material/Description';
 const Header = () => {
