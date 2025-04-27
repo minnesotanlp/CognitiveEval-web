@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LawyerBench - Inside Lawyer's Thought Process</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpg" />
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="../assets/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"  />
+  <link rel="stylesheet" href="../assets/css/index.css" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script src="https://kit.fontawesome.com/c79a85d960.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="../assets/js/index.js"></script>
+
+</head>
+<body>
+<section class="exp-page-section">
+  <div class="exp-page-container">
+    <h2>
+        [Executive Function & Memory] (Working & Short-term Memory) Backward Digit Span 
+    </h2>
+    <p class="exp-page-description">
+        In the backward digit span task, smaller models have decreased accuracy after 15-20 digit 
+        (mean backward digit span of human is 5). Like humans, LLMs find the reversal operation makes this 
+        task more difficult.
+    </p>
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+      <img src="../assets/images/reverse-digit.png"
+           alt="Backward Digit Span"
+           style="max-width:70%; height:auto;">
+    </div>
+    <ul>
+      <li>
+        Mean model accuracy, by digit sequence length, in the backward digit span task. 
+        Larger models do better at the backward digit task than their smaller counterparts.
+      </li>
+    </ul>
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+        <img src="../assets/images/reverse_perplexity.png"
+             alt="Backward Digit Span Perplexity"
+             style="max-width:70%; height:auto;">
+      </div>
+      <ul>
+        <li>
+            Perplexity of the correct sequences in the backward digit span task yields more nuance, 
+            e.g., note that Qwen2-7B accuracy is equal for lengths 15, 20, and 30, the perplexities 
+            indicate that its understanding of 30-length digits is worse.
+        </li>
+      </ul>
+  </div>
+</section>
+</body>
+</html>

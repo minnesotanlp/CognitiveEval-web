@@ -3,7 +3,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #f5f5f5;
   }
-  /* Header Section */
+  /* ---------- header section ---------- */
   header {
     background-color: #ffffff;
     padding: 40px 20px;
@@ -47,7 +47,7 @@ body {
     font-size: 0.85rem;
     color: #666;
   }
-  /* Overview Section - full width background, centered content */
+  /* ---------- overview section ---------- */
   .overview-section {
     background-color: #f5f5f5;
     padding: 60px 0;
@@ -66,7 +66,6 @@ body {
     font-size: 3rem;
     
   }
-  /* Overview bullet points and text styling */
   .overview-container ul {
     list-style: disc;
     margin: 0 auto 40px;
@@ -81,7 +80,7 @@ body {
   .overview-container li {
     margin-bottom: 20px;
   }
-  /* Gallery styling */
+  /* ---------- image gallery ---------- */
   .overview-gallery {
     position: relative;
     display: inline-block;
@@ -96,27 +95,8 @@ body {
     border-radius: 8px;
     display: block;
   }
-  /* Position arrows outside the image frame */
-  .overview-gallery button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-  }
-  .overview-gallery #prev-button {
-    left: -50px;
-  }
-  .overview-gallery #next-button {
-    right: -50px;
-  }
 
-
-
-  /* ---------- framework Section Styles ---------- */
+  /* ---------- framework section ---------- */
   .framework-section {
     background-color: #ffffff;
     padding: 40px 0;
@@ -166,17 +146,176 @@ body {
   .framework-container li {
     margin-bottom: 20px;
   }
-  .framework-demo-invite {
+
+  /* ---------- experiments section ---------- */
+  .experiment-section {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+    width: 100%;
+  }
+  .experiment-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .experiment-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #333;
+  }
+
+  .experiment-header {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.7;
-    color: #666;
+    color: #556cd6;
     text-align: justify;
     margin-bottom: 20px;
+    font-weight: bold;
   }
+
+  .experiment-description {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+
+  .finding-button-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .finding-card-button {
+    background-color: #af4c86;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    /* text-decoration: none;
+    display: inline-block; */
+    transition: background-color 0.3s;
+  }
+
+  .finding-button-grid body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  /* ---------- robustness section ---------- */
+  .robustness-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+    width: 100%;
+  }
+  .robustness-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .robustness-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #333;
+  }
+
+  .robustness-header {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #556cd6;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .robustness-description {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+
+  .robustness-container ul {
+    list-style: disc;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    text-align: justify;
+    padding-left: 40px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+  }
+  .robustness-container li {
+    margin-bottom: 20px;
+  }
+
+  .robustness-container a {
+    color:#af4c86;
+  }
+
+  /* ---------- tutorial section ---------- */
+  .tutorial-section {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+    width: 100%;
+  }
+  .tutorial-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .tutorial-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #333;
+  }
+
+  .tutorial-header {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #556cd6;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .tutorial-description {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+
   .video-container {
     position: relative;
-    padding-top: 2rem;
+    padding-top: 0rem;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
@@ -190,291 +329,8 @@ body {
     height: 100%;
     border-radius: 8px;
   }
-  .framework-how {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 10px;
-    text-align: justify;
-  }
-  .framework-bullets {
-    list-style-type: none;
-    padding-left: 0.8rem;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    text-align: justify;
-  }
-  .framework-bullets li {
-    margin-bottom: 10px;
-  }
 
-    /* Human Cognitive Science Experiements on LLMs */
-    .experiment-section {
-      background-color: #f5f5f5;
-      padding: 60px 0;
-      width: 100%;
-    }
-    .experiment-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .experiment-container h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-
-    .experiment-header {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #556cd6;
-      text-align: justify;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .experiment-description {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #666;
-      text-align: justify;
-      margin-bottom: 30px;
-    }
-
-    .finding-button-grid {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .finding-card-button {
-      background-color: #af4c86;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      cursor: pointer;
-      min-width: 200px;
-      text-align: center;
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-      /* text-decoration: none;
-      display: inline-block; */
-      transition: background-color 0.3s;
-    }
-
-    .finding-button-grid body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 2rem;
-    }
-    /* Gallery Styles */
-    .gallery-view {
-      position: relative;
-      text-align: center;
-      margin-bottom: 40px;
-      padding: 0 20px;
-    }
-    .gallery-image-container {
-      margin: 0 auto;
-    }
-    .gallery-image-container img {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
-    }
-    .gallery-caption {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.5rem;
-      margin-top: 8px;
-    }
-    .gallery-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 8px;
-      cursor: pointer;
-    }
-    #gallery-prev {
-      left: -50px;
-    }
-    #gallery-next {
-      right: -50px;
-    }
   
-
-
-    .workflow-visualization-section {
-      background-color: #ffffff;
-      padding: 60px 0;
-      width: 100%;
-    }
-    .workflow-visualization-container {
-      position: relative;
-      text-align: center;
-      margin: 0 auto;
-      max-width: 90%;
-    }
-    .workflow-visualization-container h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-    .video-container video {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .workflow-caption {
-      margin-top: 10px;
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.5rem;
-      text-align: center;
-      color: #333;
-    }
-    .workflow-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 8px;
-      cursor: pointer;
-    }
-    #workflow-prev {
-      left: -40px;
-    }
-    #workflow-next {
-      right: -40px;
-    }
-  
-    /* ---------- CognitiveEval Experimental Robustness ---------- */
-    .robustness-section {
-      background-color: #ffffff;
-      padding: 60px 0;
-      width: 100%;
-    }
-    .robustness-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .robustness-container h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-
-    .robustness-header {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #556cd6;
-      text-align: justify;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .robustness-description {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #666;
-      text-align: justify;
-      margin-bottom: 30px;
-    }
-
-    .robustness-container ul {
-      list-style: disc;
-      margin: 0 auto 40px;
-      max-width: 100%;
-      text-align: justify;
-      padding-left: 40px;
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #666;
-    }
-    .robustness-container li {
-      margin-bottom: 20px;
-    }
-
-    .robustness-container a {
-      color:#af4c86;
-    }
-    /* Dataset Card Section Styles */
-    .dataset-card-section {
-      background-color: #ffffff;
-      width: 100%;
-      padding: 60px 0;
-    }
-    .dataset-card-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .dataset-card-container h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-    .dataset-description {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #666;
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-    /* JSON Preview Card Styles */
-    .json-preview {
-      max-height: 400px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: monospace;
-      font-size: 0.9rem;
-      padding: 8px;
-      text-align: left;
-      background-color: #ffffff;
-    }
-    .json-line {
-      padding: 2px 4px;
-    }
-    /* Background colors based on indent and index parity */
-    .indent-0.even { background-color: white; }
-    .indent-0.odd { background-color: #f5f5f5; }
-    .indent-1.even, .indent-2.even, .indent-3.even { background-color: #f0f8ff; }
-    .indent-1.odd, .indent-2.odd, .indent-3.odd { background-color: #e6f2ff; }
-    /* Hover styles: indent 1 gets a different hover color */
-    .indent-1:hover { background-color: #fff2b2 !important; }
-    .json-line:not(.indent-1):hover { background-color: #ffffcc !important; }
-
-
 
     /* Shared container styling for bottom sections */
     .bottom-container {
@@ -513,7 +369,7 @@ body {
     }
     /* Citation Section */
     .citation-section {
-      background-color: #ffffff;
+      background-color: #f5f5f5;
       width: 100%;
       padding-top: 40px;
       padding-bottom: 60px;
@@ -551,3 +407,44 @@ body {
       font-size: 0.9rem;
       color: #666;
     }
+    /* Experiment Page */
+  .exp-page-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+  }
+  .exp-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .exp-page-container h2 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 3rem;
+    
+  }
+  .exp-page-container ul {
+    list-style: disc;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    text-align: justify;
+    padding-left: 40px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+  }
+  .exp-page-container li {
+    margin-bottom: 20px;
+  }
+  .exp-page-description {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 30px;
+  }

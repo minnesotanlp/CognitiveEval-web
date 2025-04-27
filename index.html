@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LawyerBench - Inside Lawyer's Thought Process</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpg" />
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+  <link rel="stylesheet" href="../assets/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="../assets/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"  />
+  <link rel="stylesheet" href="../assets/css/index.css" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script src="https://kit.fontawesome.com/c79a85d960.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/bulma-carousel.min.js"></script>
+  <script src="../assets/js/bulma-slider.min.js"></script>
+  <script src="../assets/js/index.js"></script>
+
+</head>
+<body>
+
+
+
+  <!-- Header Section -->
+  <header>
+    <h1 class="header-title">
+      CognitiveEval
+    </h1>
+    
+    <!-- Authors Section -->
+    <div class="authors-row" id="authors-container">
+      <script>
+        const authors = [
+          {
+            name: 'Karin De Langis',
+            homepage: 'https://karinjd.github.io/',
+            photo: './assets/images/test.jpeg',
+            affiliation: 'Computer Science & Engineering, UMN',
+            affiliationLink: 'https://cse.umn.edu',
+          },
+          {
+            name: 'Jong Inn Park',
+            homepage: 'https://jong-inn.github.io/',
+            photo: './assets/images/test.jpeg',
+            affiliation: 'Computer Science & Engineering, UMN',
+            affiliationLink: 'https://cse.umn.edu',
+          },
+          {
+            name: 'Bin Hu',
+            homepage: 'https://example.com/bin',
+            photo: './assets/images/test.jpeg',
+            affiliation: 'Computer Science & Engineering, UMN',
+            affiliationLink: 'https://cse.umn.edu',
+          },
+          {
+            name: 'Khanh Chi Le',
+            homepage: 'https://example.com/khanh',
+            photo: './assets/images/test.jpeg',
+            affiliation: 'Computer Science & Engineering, UMN',
+            affiliationLink: 'https://cse.umn.edu',
+          },
+          {
+            name: 'Dongyeop Kang',
+            homepage: 'https://dykang.github.io/',
+            photo: './assets/images/test.jpeg',
+            affiliation: 'Computer Science & Engineering, UMN',
+            affiliationLink: 'https://cse.umn.edu',
+          },
+          {
+              name: 'Andreas Scharamm',
+              homepage: 'https://example.com/andreas',
+              photo: './assets/images/test.jpeg',
+              affiliation: 'Linguistics, Hamline University',
+              affiliationLink: '',
+          },
+          {
+              name: 'Andrew Elfenbein',
+              homepage: 'https://example.com/andrew',
+              photo: './assets/images/test.jpeg',
+              affiliation: 'Cognitive Psychology, UMN',
+              affiliationLink: '',
+          },
+          {
+              name: 'Mike Mensink',
+              homepage: 'https://example.com/mike',
+              photo: './assets/images/test.jpeg',
+              affiliation: 'Psychology, UW - Stout',
+              affiliationLink: '',
+          },
+        ];
+        const container = document.getElementById('authors-container');
+
+        authors.forEach(author => {
+          const authorDiv = document.createElement('div');
+          authorDiv.className = 'author';
+
+          authorDiv.innerHTML = `
+            <a href="">
+              <img src="${author.photo}" alt="${author.name}">
+              ${author.name}
+            </a>
+            <div class="affiliation">${author.affiliation}</div>
+          `;
+
+          container.appendChild(authorDiv);
+        });
+      </script>
+    </div>
+    <div class="affiliation"><sup>*</sup>project leads, &nbsp;&nbsp;  <sup>+</sup>senior advisors</div>
+    <br><br>
+
+    <a class="subtitle" href="https://minnesotanlp.github.io/"><img src="./assets/images/nlp_lab_logo.png" style="height: 4em; margin-inline: 5px;"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- <a class="subtitle" href="https://twin-cities.umn.edu/"><img src="./assets/images/university-of-minnesota-logo-png_seeklogo-43380922.png" style="height: 4em; margin-inline: 5px;"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="subtitle" href="https://www.openphilanthropy.org/"><img src="./assets/images/Open_Philanthropy_logo.svg.png" style="height: 4em; margin-inline: 5px;"></a> -->
+
+
+  <div class="column has-text-centered" style="padding-top: 2rem;padding-bottom: 0;">
+    <div class="publication-links">
+      <span class="link-block">
+        <a
+          href=""
+          target="_blank"
+          class="external-link button is-normal is-rounded is-dark is-outlined"
+        >
+          <span class="icon">
+            <i class="fa-solid fa-file"></i>
+          </span>
+          <span>Paper</span>
+        </a>
+      </span>
+
+      <span class="link-block">
+        <a
+          href=""
+          target="_blank"
+          class="external-link button is-normal is-rounded is-dark is-outlined"
+        >
+          <span class="icon">
+            <i class="fa fa-code"></i>
+          </span>
+          <span>Code</span>
+        </a>
+      </span>
+
+    </div>
+    <div class="form-links" style="padding-top: 2rem;padding-bottom: 0;">
+      <span class="link-block">
+        <a
+          href="https://cogbench-prd.ngrok.dev"
+          target="_blank"
+          class="external-link button is-normal is-rounded is-dark is-contained"
+        >
+          <span class="icon">
+            <i class="fa-solid fa-file"></i>
+          </span>
+          <span>Data Collection Tool</span>
+        </a>
+      </span>
+
+      <span class="link-block">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdAyv3ELW09sRa1L_xQrDXS9q1aeWtntdjAFpeH4SXJoe6FVQ/viewform"
+          target="_blank"
+          class="external-link button is-normal is-rounded is-dark is-contained"
+        >
+          <span class="icon">
+            <i class="fa fa-laptop"></i>
+          </span>
+          <span>Collaboration Interest Form</span>
+        </a>
+      </span>  
+      <span class="link-block">
+        <a
+          href="./assets/pdfs/instructions.pdf"
+          target="_blank"
+          class="external-link button is-normal is-rounded is-dark is-contained"
+        >
+          <span class="icon">
+            <i class="fa fa-code"></i>
+          </span>
+          <span>Instructions for Contributors</span>
+        </a>
+      </span>
+
+    </div>
+  </div>
+
+  </header>
+
+
+<!-- ---------- Overview Section ---------- -->
+<section class="overview-section">
+  <div class="overview-container">
+    <h2>Project Objective</h2>
+    <ul>
+      <li>
+        Test theories/models/frameworks developed in human studies within LLM settings 
+        - test the extent to which these models demonstrate genuine understanding, 
+        rather than merely sophisticated statistical pattern matching. 
+        Quanitfy the difference between human and LLM.
+      </li>
+      <li>
+        Develop CognitiveEval, a framework for systematically evaluating the 
+        artificial cognitive capabilities of LLMs, with a particular emphasis 
+        on robustness in response collection. 
+        The key features of CognitiveEval include: (i) auto-matic prompt permutations, 
+        and (ii) testing that gathers both generations and model probability estimates. 
+        Our experiments demonstrate that these features lead to more robust experimental 
+        outcomes. Using CognitiveEval, we replicate five classic experiments in cognitive 
+        science, illustrating the framework’s generalizability across various experimental t
+        asks and obtaining a cognitive profile of several state-of-the-art LLMs.
+
+
+      </li>
+    </ul>
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+      <img src="./assets/images/lllm_vs_human_cognitive_assessment.png"
+           alt="Cognitive Assessment Result"
+           style="max-width:70%; height:auto;">
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Framwork Section ---------- -->
+<section class="framework-section">
+  <div class="framework-container">
+    <h2>CognitiveEval Framework Introduction</h2>
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+      <img src="./assets/images/cognitive_eval_pipeline.png"
+           alt="Cognitive Assessment Result"
+           style="max-width:70%; height:auto;">
+    </div>
+    <p class="framework-description">
+      The goal of CognitiveEval is to offer a flexible and robust framework for 
+      adapting a wide range of cognitive experimental studies, ultimately helping researchers 
+      gather converging evidence to support their conclusions in cognitive evaluation of LLMs. 
+      Guided by these design principles, we outline the core components of CognitiveEval.
+    </p>
+
+    <p class="framework-header">
+      Prompt Permutations
+    </p>
+
+    <p class="framework-description">
+      CognitiveEval provides automatic prompt permutations to assist users in diversifying their prompts. 
+      CognitiveEval prompts have two components which are acted on separately.
+      The general instructions are paraphrased by GPT-4o, and the data format is diversified across 
+      punctuation and whitespace according to FORMATSPREAD. We generate 3 distinct paraphrases combined 
+      with 10 data formats, yielding 30 prompt variations.
+    </p>
+
+    <ul>
+      <li>Instructions, which explain the task, e.g.: Read the following story and phrase, and determine if the phrase is true based on the story.</li>
+      <li>Data format, which describes generally how the individual stimuli should be presented to the model, e.g.: Story: , Phrase:</li>
+    </ul>
+
+    <p class="framework-header">
+      Experiment Dialogues
+    </p>
+
+    <p class="framework-description">
+      CognitiveEval supports interactive dialogue experiments, or presenting each stimulus in a separate dialogue. 
+      In many cases separate dialogues are preferred to order to avoid order effects. 
+      For example, in our WCST, the LLM must play a game and respond to feedback. 
+      In such cases, a chat dialogue is conducive to replicating the experiment in LLMs.
+    </p>
+    <p class="framework-header">
+      Metric Collection
+    </p>
+
+    <p class="framework-description">
+      CognitiveEval collects two measures: (1) response accuracy, by comparing model output with a target output, and (2) model probabilities of a target output.
+      <br/>
+      When computing probabilities, in the event that the target output is a single token long (e.g. “A,” or “False”) 
+      this is obtained by inputting the prompt to the model and taking the softmax of the logits from the language modeling head.
+      In the event that the target output is several tokens long, we compute the perplexity of the target answer.
+    </p>
+    <p class="framework-header">
+      Models and Inference
+    </p>
+
+    <p class="framework-description">
+      We use six open-source LLMs from three different model families, each with two size variations: Gemma2 with 9B and 27B parameters, Llama3.1 with 8B and 70B parameters, and Qwen2 with 7B and 72B parameters. All models are the instruction-tuned variants.
+Our pipeline also enables the use of proprietary models such as GPT-4o and reasoning-oriented models like DeepSeek-R1.
+    </p>
+  </div>
+</section>
+
+<!-- ---------- Human Cognitive Science Experiements on LLMs  ---------- --> 
+<section class="experiment-section"> <div class="experiment-container"> 
+  <h2>Human Cognitive Science Experiements on LLMs</h2>
+  <p class="experiment-header">
+    Experiments
+  </p>
+  <p class="experiment-description">
+    We use CognitiveEval to adapt five classic cognitive experimental tasks for LLMs. 
+    The tasks are chosen to balance variety and depth: we explore tasks related to two broad types 
+    of cognition, and within those types, select different domains and experimental procedures.
+    <br/><br/>
+    Executive function is understood to enable goal-directed behavior, making it an interesting 
+    area of study in LLMs. Memory processes have to do with either the encoding, storage, or retrieval 
+    of information and past experiences.
+  </p>
+
+  <div class="overview-gallery" style="display: flex; justify-content: center;">
+    <img src="./assets/images/cognition_test_tree.png"
+         alt="Cognition Test Tree"
+         style="max-width:85%; height:auto;">
+  </div>
+
+  <p class="experiment-header">
+    Findings
+  </p>
+
+  <div class="finding-button-grid">
+    <button class="finding-card-button" onclick="location.href='experiments/cardsorting.html'">WISCONSIN CARD SORTING</button>
+    <button class="finding-card-button" onclick="location.href='experiments/flanker.html'">FLANKER TEST</button>
+    <button class="finding-card-button" onclick="location.href='experiments/forwarddigitspan.html'">FORWARD DIGIT SPAN</button>
+    <button class="finding-card-button" onclick="location.href='experiments/backwarddigitspan.html'">BACKWARD DIGIT SPAN</button>
+    <button class="finding-card-button" onclick="location.href='experiments/drm.html'">DRM TASK</button>
+
+  </div> 
+</section>
+  
+<!-- ---------- CognitiveEval Experimental Robustness ---------- -->
+<section class="robustness-section">
+  <div class="robustness-container">
+    <h2>CognitiveEval Experimental Robustness</h2>
+    <p class="robustness-header">
+      Metric Collection
+    </p>
+    <p class="robustness-description">
+      The benefit of collecting both generation accuracy and probability can be seen throughout our experiments
+    </p>
+    <ul>
+      <li>
+        <a href="flanker.html">Flanker Task </a>: This provides insight into the probability behind the model's responses. 
+        Even when the answer is correct, the model's confidence (i.e., estimated probability) is lower in the incongruent condition.
+      </li>
+      <li>
+        <a href="backwarddigitspan.html">Backward Digit Span </a>: Although the model's accuracy is the same across different task conditions, 
+        the perplexity reveals that the model’s understanding of certain task variations is weaker.
+      </li>
+    </ul>
+
+    <p class="robustness-header">
+      Prompt Permutations
+    </p>
+    <p class="robustness-description">
+      Except for the Digit Span task (where models perform nearly perfectly), all other tasks show
+      variability in model accuracy depending on the prompt used.
+    </br>
+      For model pairs where one outperforms the other under a specific prompt, this ordering can 
+      reverse under a different prompt.
+    </p>
+
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+      <img src="./assets/images/prompt_per.png"
+           alt="Prompt Permutations"
+           style="max-width:85%; height:auto;">
+    </div>
+    <ul>
+      <li>
+        For each prompt variation, we compute each model’s average accuracy on the task. 
+        These box plots display the range in resulting model accuracies over the prompts. 
+        For challenging tasks like Flanker and WCST, the range accuracies are comparatively large.
+      </li>
+    </ul>
+    <div class="overview-gallery" style="display: flex; justify-content: center;">
+      <img src="./assets/images/flip_probability.png"
+           alt="Flip Prob"
+           style="max-width:70%; height:auto;">
+    </div>
+    <ul>
+      <li>
+        Probability that comparison of M and M′ changes under prompt p′, assuming 
+        |acc(M) − acc(M′)| ≥ d under prompt variation p. Probabilities are computed 
+        over all 30 prompt variations and all five cognitive tasks.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ---------- CognitiveEval Tutorial ---------- -->
+<section class="tutorial-section">
+  <div class="tutorial-container">
+    <h2> CognitiveEval Tutorial </h2>
+    <p class="tutorial-description">
+      CognitiveEval experiments can be set up using (1) web interface or through (2) json configuration files.
+    </p>
+    <p class="tutorial-header">
+      Web Interface
+    </p>
+    <p class="tutorial-description">
+      Below is the demo video for the LLM-adapted version of Stroop experiment (1985).
+      <br/> <br/>
+      In human version of Stroop experiment, participants are asked to name the color of the ink 
+      in which a word is written, ignoring the word's meaning. In the incongruent condition (e.g., 
+      the word "RED" written in green ink), response times are slower and errors are more frequent 
+      than in the congruent condition (e.g., "RED" in red ink). The Stroop effect is widely used in 
+      psychology to study attention, automaticity, and cognitive flexibility.
+    </p>
+    <div class="video-container">
+      <video controls>
+        <source src="./assets/videos/demo_video_150crop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="tutorial-description">
+      View this video for a demo of the data collection web interface. We will provide the login credentials once you fill out our interest form!
+    </p>
+    <p class="tutorial-header">
+      JSON Configuration Files
+    </p>
+
+    <p class="tutorial-description">
+      <strong>Stimuli file (csv)</strong> Requirements are intentionally lax: it can contain any number of columns, but should include column(s) corresponding to relevant text to include in the prompt, as well as column(s) for independent variable(s).
+      <br/><br/>
+      <strong>Group specification</strong> Designate stimuli columns as describing independent variables (IVs) and create groups based on the different IV levels. IVs can be combined, for example if one IV is politness and another IV is sentiment, a positive + impolite group could be created.
+      <br/><br/>
+      <strong>Metric specification</strong> Describe whether you would like CognitiveEval to automatically evaluate responses for accuracy rates, average reported numbers, or a custom function.
+      <br/><br/>
+      <strong>Prediction specification</strong> Specify how you would like CognitiveEval to automatically compare your groups with respect to which specified metrics.
+      <br/><br/>
+      <strong>Prompt</strong> Instructions for the model that describe the experimental task. The web interface allows users to sandbox their prompts with GPT-4o using the OpenAI API.
+      <br/><br/>
+      <strong>Metadata</strong> Experiment setup details, such as which models you would like to test (CognitiveEval currently supports Huggingface and OpenAI models), and whether the stimuli should be served in an interactive dialogue or one-at-a-time.
+    </p>
+  </div>
+</section>
+
+  <!-- ---------- Call for Participation Section ---------- -->
+<section class="call-for-participation">
+    <div class="bottom-container">
+      <h2>Call for Participation</h2>
+      <p class="bottom-body">
+        We are currently expanding our team to include more researchers in psychology, linguistics, 
+        cognitive science, and related fields. If you are interested in collaborating and co-authoring 
+        with us, please be in touch. The best way to contact us is by filling out the 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAyv3ELW09sRa1L_xQrDXS9q1aeWtntdjAFpeH4SXJoe6FVQ/viewform">
+          collaboration interest form.
+        </a>
+        <br/><br/>
+        Contact us at <strong>dongyeop@umn.edu</strong></p>
+      </div>
+    </div>
+</section>
+  
+  <!-- ---------- Citation Section ---------- -->
+  <section class="citation-section">
+    <div class="bottom-container">
+      <h2>Citation</h2>
+      <pre class="citation-code">
+        @article{de2025framework,
+          title={A Framework for Robust Cognitive Evaluation of LLMs},
+          author={de Langis, Karin and Park, Jong Inn and Hu, Bin and Le, Khanh Chi and Schramm, Andreas and Mensink, Michael C and Elfenbein, Andrew and Kang, Dongyeop},
+          journal={arXiv preprint arXiv:2504.02789},
+          year={2025}
+        }
+      </pre>
+    </div>
+  </section>
+  
+  <!-- ---------- Footer Section ---------- -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2024-2025 Minnesota NLP &amp; University of Minnesota. All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
